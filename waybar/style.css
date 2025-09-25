@@ -1,0 +1,63 @@
+/* Global defaults */
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "Fira Code", "JetBrainsMono Nerd Font", monospace;
+	font-size: 13px;
+	min-height: 0;
+}
+
+/* Bar background */
+window#waybar {
+	background: rgba(10, 10, 10, 1);
+	color: rgba(204, 238, 238, 10);
+	border-bottom: 2px solid rgba(0, 119, 119, 1);
+}
+
+/* Workspaces */
+#workspaces button {
+	padding: 0 10px;
+	background: transparent;
+	color: rgba(170, 170, 170, 1);
+	transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+	color: rgba(0, 191, 191, 1);
+	border-bottom: 2px solid rgba(0, 191, 191, 1);
+	font-weight: bold;
+}
+
+#workspaces button:hover {
+	color: rgba(28, 207, 207, 1);
+}
+
+/* Modules */
+
+#clock, 
+#network, 
+#battery, 
+#tray {
+	padding: 0 10px;
+	margin: 0 4px;
+	background: rgba(17, 17, 17, 1);
+	border-radius: 6px;
+}
+
+/* Hover Highlght */
+
+#clock:hover,
+#network:hover,
+#battery:hover,
+#tray:hover {
+	background: rgba(0, 68, 68, 1);
+	color: rgba(255, 255, 255, 1);
+}
+
+/* Battery low warning */
+
+#battery.warning {
+	color: rgba(255, 85, 85, 1);
+}
+
+
