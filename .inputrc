@@ -1,0 +1,10 @@
+#Make tab completion insensitive
+set completion-ignore-case on
+
+#Show all matches without double tapping tab
+set show-all-if-ambiguous on
+
+#Allow back history with arrows
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+

@@ -1,0 +1,31 @@
+#/bin/bash
+
+#Set up XDG_Config_Home
+mkdir -p "$XDG_CONFIG_HOME"/.config
+
+#Create symlinks for existing configurations
+ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.config
+ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
+ln -sf "$PWD/.vimrc" "$HOME"/.inputrc
+ln -sf "$PWD/.vimrc" "$HOME"/.vimrc
+
+#Install default packages
+if command -v apt-get &>/dev/null; then
+echo "Updating the list of packages"
+sudo apt-get update -y
+
+echo "Installing vim, tmux, and bash-completion"
+
+sudo apto-get install -y \
+vim \
+tmux \
+bash-completion
+fi
+
+#Load updated bashrc immediately
+if [ -f "$HOME/.bashrc" }; then
+source "$HOME/.backrc"
+fi
+
+#Inform the user
+echo "Setup is complete. Cowabunga!
