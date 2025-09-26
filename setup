@@ -16,7 +16,7 @@ sudo apt-get update -y
 
 echo "Installing vim, tmux, and bash-completion"
 
-sudo apto-get install -y \
+sudo apt-get install -y \
 vim \
 tmux \
 bash-completion
