@@ -1,31 +1,20 @@
-#/bin/bash
+#!/bin/bash 
 
-#Set up XDG_Config_Home
-mkdir -p "$XDG_CONFIG_HOME"/.config
+set -euo pipefail
 
-#Create symlinks for existing configurations
-ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.config
-ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
-ln -sf "$PWD/.vimrc" "$HOME"/.inputrc
-ln -sf "$PWD/.vimrc" "$HOME"/.vimrc
+XDG_CONFIG_HOME="$HOME/.config"
 
-#Install default packages
-if command -v apt-get &>/dev/null; then
-echo "Updating the list of packages"
-sudo apt-get update -y
-
-echo "Installing vim, tmux, and bash-completion"
-
-sudo apt-get install -y \
-vim \
-tmux \
-bash-completion
+if if ! command -v chezmoi >/dev/null; then
+	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git
 fi
 
-#Load updated bashrc immediately
-if [ -f "$HOME/.bashrc" }; then
-source "$HOME/.backrc"
+if command -v alacritty >/dev/null;
+then 
+mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
 fi
 
-#Inform the user
-echo "Setup is complete. Cowabunga!
+sudo apt update
+sudo apt install vim tmux bash-completion
+
+exit 0
