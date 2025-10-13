@@ -8,7 +8,7 @@ if ! command -v chezmoi >/dev/null; then
 	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git
 fi
 
-if command -v alacritty >/dev/null;
+if ! command -v alacritty >/dev/null;
 then 
 mkdir -p "$XDG_CONFIG_HOME"/alacritty/themes
 git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacritty/themes
