@@ -1,10 +1,10 @@
 #!/bin/bash 
 
 set -euo pipefail
-
+sleep 3
 XDG_CONFIG_HOME="$HOME/.config"
 
-if if ! command -v chezmoi >/dev/null; then
+if ! command -v chezmoi >/dev/null; then
 	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git
 fi
 
@@ -15,6 +15,12 @@ git clone https://github.com/alacritty/alacritty-theme "$XDG_CONFIG_HOME"/alacri
 fi
 
 sudo apt update
+
+sleep 5
+
 sudo apt install vim tmux bash-completion
 
+#sudo usermod -aG sudo,gindev gindev || true
+
+echo "Cowabunga dude!"
 exit 0

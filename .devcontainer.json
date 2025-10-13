@@ -2,8 +2,13 @@
 "image": "mcr.microsoft.com/devcontainers/base:debian",
 "features": {
 	"ghcr.io/devcontainers/features/azure-cli:1": {}
-	
+//	"ghcr.io/devcontainers/features/common-utils:2": {
+//		"username":"gindev",
+//		"uid": 1000,
+//		"gid": 1000
+//	}
 },
 "Settings": {
+//	"remoteUser": "gindev"
 }
 }
