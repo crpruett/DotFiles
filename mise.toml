@@ -1,0 +1,4 @@
+[tools]
+chezmoi = "latest"
+kubectl = "latest"
+python = "latest"
