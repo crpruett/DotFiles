@@ -4,14 +4,14 @@
 clear 
 
 printf "\n"
-printf "  $s\n" "IP ADDR: $(curl ifconfig.me)"
-printf "  $s\n" "USER: $(echo $USER)"
-printf "  $s\n" "DATE: $(date)"
-printf "  $s\n" "HOSTNAME: $(hostname f)"
-printf "  $s\n" "CPU: $(awk -F: '/model name/{print $2}' | head -1)"
-printf "  $s\n" "KERNEL: $(uname -rms)"
-printf "  $s\n" "Packages: $(dpkg --get-selections | wc -l)"
-printf "  $s\n" "MEMORY: $(free -m -h | awk '/Mem/{print $3"/"$2}')"
+printf "  %s\n" "IP ADDR: $(curl ifconfig.me)"
+printf "  %s\n" "USER: $(echo $USER)"
+printf "  %s\n" "DATE: $(date)"
+printf "  %s\n" "HOSTNAME: $(hostname -f)"
+printf "  %s\n" "CPU: $(uname -m | head -1)"
+printf "  %s\n" "KERNEL: $(uname -rms)"
+printf "  %s\n" "Packages: $(pacman -Q | wc -l)"
+printf "  %s\n" "MEMORY: $(free -m -h | awk '/Mem/{print $3"/"$2}')"
 printf "\n"
 
 # If not running interactively, don't do anything
