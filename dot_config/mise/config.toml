@@ -1,3 +1,6 @@
 [tools]
 bat = "latest"
 chezmoi = "latest"
+neovim = "latest"
+node = "latest"
+
