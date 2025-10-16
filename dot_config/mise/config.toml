@@ -1,5 +1,5 @@
 [tools]
 chezmoi = "latest"
-neovim = "latest"
+neovim= "latest"
 node = "latest"
 
