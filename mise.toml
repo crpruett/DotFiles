@@ -1,4 +1,6 @@
 [tools]
 chezmoi = "latest"
 kubectl = "latest"
+neovim = "latest"
+node = "latest"
 python = "latest"
