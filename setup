@@ -1,18 +1,16 @@
 #!/bin/bash 
 
 set -euo pipefail
-sleep 3
 XDG_CONFIG_HOME="$HOME/.config"
 
 if ! command -v chezmoi >/dev/null; then
 	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git
 fi
 
-sudo apt update
+#sudo apt update
 
-sleep 5
 
-sudo apt install vim tmux bash-completion
+#sudo apt install vim tmux bash-completion
 
 #sudo usermod -aG sudo,gindev gindev || true
 
