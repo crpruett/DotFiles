@@ -4,7 +4,7 @@
 clear 
 
 printf "\n"
-printf "  %s\n" "IP ADDR: $(curl ifconfig.me)"
+printf "  %s\n" "IP ADDR: $(ip -4 address show dev wlan0 | grep inet | awk '{print $2}' | cut -d/ -f1)"
 printf "  %s\n" "USER: $(echo $USER)"
 printf "  %s\n" "DATE: $(date)"
 printf "  %s\n" "HOSTNAME: $(hostname -f)"
