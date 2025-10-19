@@ -2,4 +2,6 @@
 chezmoi = "latest"
 neovim= "latest"
 node = "latest"
-
+bat = "latest"
+fzf = "latest"
+lsd = "latest"
