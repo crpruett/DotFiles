@@ -7,9 +7,9 @@ if command -v zsh > /dev/null; then
 	sudo chsh -s "$(command -v zsh)" "$USER"
 fi
 
-if ! command -v chezmoi >/dev/null; then
-	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git v2.66.0
-fi
+#if ! command -v chezmoi >/dev/null; then
+#	sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:crpruett/dotfiles.git v2.66.0
+#fi
 
 if [ ! -d "$HOME/.zsh" ]; then
 	mkdir -p "$HOME/.zsh"
