@@ -1,5 +1,5 @@
 [tools]
-chezmoi = "latest"
+chezmoi = "2.66.0"
 kubectl = "latest"
 neovim = "latest"
 node = "latest"
