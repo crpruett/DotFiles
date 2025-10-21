@@ -6,26 +6,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
-
-
-# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-if command -v nvim > /dev/null ; then
-  export EDITOR="nvim"
-  export VISUAL="nvim"
-fi
-
-export LANG="en_US.UTF-8"
-
-# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-if command -v mise > /dev/null ; then
-  eval "$($HOME/.local/bin/mise activate zsh)"
-fi
-
-
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -46,6 +26,25 @@ prompt pure
 
 bindkey -v
 export KEYTIMEOUT=1 # make switching between modes faster
+
+
+
+# ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if command -v nvim > /dev/null ; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+fi
+
+export LANG="en_US.UTF-8"
+
+# ~~~~~~~~~~~~~~~ Mise ~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+if command -v mise > /dev/null ; then
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
 
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,5 +1,5 @@
 [tools]
-chezmoi = "2.66.0"
+chezmoi = "latest"
 neovim= "latest"
 node = "latest"
 bat = "latest"
