@@ -30,5 +30,8 @@ fi
 
 #sudo usermod -aG sudo,gindev gindev || true
 
+#Ensure that terminal env does not incorrectly get applied to devcontainer term
+export TERM=xterm-256color
+
 echo "Cowabunga dude!"
 exit 0
