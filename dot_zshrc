@@ -80,3 +80,8 @@ if command -v mise > /dev/null; then
 source <(mise completion zsh)
 fi
 
+#~~~~~~~~~~~~~~ Terminal Consistency ~~~~~~~~~~~~~~~
+if [[ "$TERM" == "alacritty" ]]; then
+export TERM="xterm-256color"
+fi
+
