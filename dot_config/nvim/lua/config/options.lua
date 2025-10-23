@@ -1,3 +1,4 @@
+vim.g.lazygit_config = false
 vim.g.lazyvim_check_order = false
 vim.opt.ignorecase = true
 vim.opt.relativenumber = false
