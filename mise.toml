@@ -1,6 +1,9 @@
 [tools]
 chezmoi = "2.66.0"
+k3s = "latest"
+k9s = "latest"
 kubectl = "latest"
 neovim = "latest"
 node = "latest"
 python = "latest"
+rancher = "latest"
