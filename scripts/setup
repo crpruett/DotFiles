@@ -1,4 +1,4 @@
 #!/bin/bash 
 
-/usr/local/bin/mise trust /workspaces/*/mise.toml
+/usr/local/bin/mise trust /workspaces/"$DEVPOD_WORKSPACE_ID"/mise.toml && /usr/local/bin/mise install
 echo "Mise trust configured."

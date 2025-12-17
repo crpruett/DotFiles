@@ -6,4 +6,21 @@ kubectl = "latest"
 neovim = "latest"
 node = "latest"
 python = "latest"
-rancher = "latest"
+pre-commit = "latest"
+ruff = "latest"
+trivy = "0.61.1"
+uv = "latest"
+aws-cli = { version = "latest", symlink_bins = "true" }
+azure-cli = "latest"
+
+[settings]
+python.uv_venv_auto = true
+idiomatic_version_file_enable_tools = ["python"]
+experimental = true
+
+[env]
+#APP_REPO = "myvar"
+
+[hooks]
+enter = "bash ./scripts/setup_project"
+
